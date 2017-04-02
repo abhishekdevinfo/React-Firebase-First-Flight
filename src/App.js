@@ -31,9 +31,8 @@ class App extends Component {
 
   handleSubmit(event) {
     event.preventDefault();
-    database.ref()
-            .child('AMAZINGNEWDATA')
-            .set(this.state.newData);
+    database.ref('/AMAZINGNEWDATA/this/will/automatic/create/path/if/doesnot/exist')
+            .push(this.state.newData);
   } 
 
   render() {
